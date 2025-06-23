@@ -27,7 +27,7 @@ export const sampleCards = [
       clarity: 0,
       adaptability: 3,
     },
-    rarity: "Skilled",
+    rarity: "Advanced",
     createdAt: new Date().toISOString(),
   },
   {
@@ -111,9 +111,9 @@ export const sampleCards = [
       "When your slides are drowning in words, your audience is gasping for air. Less is more!",
     image: "/workshop-cards/cardImages/word flood.png",
     effects: {
-      engagement: -2,
+      engagement: -3,
       composure: 0,
-      clarity: -2,
+      clarity: -3,
       adaptability: -5,
     },
     rarity: "Base",
@@ -139,7 +139,7 @@ export const sampleCards = [
     id: 10,
     title: "A to B Navigator",
     content:
-      "Know exactly where your audience starts (A) and where you want them to end (B). Be intentional about every step in between.",
+      "Know where your audience is (A) and where you want to take them (B). Every step in between is intentional.",
     image: "/workshop-cards/cardImages/a to b.jpeg",
     effects: {
       engagement: 5,
@@ -148,6 +148,36 @@ export const sampleCards = [
       adaptability: 1,
     },
     rarity: "Skilled",
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: 11,
+    title: "Honest Advisor",
+    content:
+      "Don't sell, advise. Tell the good with the bad. People won't trust you if you only show one side.",
+    image: "/workshop-cards/cardImages/double edged sword.jpeg",
+    effects: {
+      engagement: 3,
+      composure: 0,
+      clarity: 5,
+      adaptability: 0,
+    },
+    rarity: "Skilled",
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: 12,
+    title: "Content Tailor",
+    content:
+      "Learn as much as possible about your audience. Customize your content to fit their needs perfectly.",
+    image: "/workshop-cards/cardImages/tailor.jpeg",
+    effects: {
+      engagement: 2,
+      composure: 0,
+      clarity: 5,
+      adaptability: 0,
+    },
+    rarity: "Base",
     createdAt: new Date().toISOString(),
   },
 ];
