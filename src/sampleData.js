@@ -78,7 +78,7 @@ export const sampleCards = [
     id: 2,
     title: "Accordion Slides",
     content:
-      "Being able to talk for however long you need to is the mark of a true professional.",
+      "Being able to adapt your talk for however long you need to is the mark of a true professional speaker.",
     image: "/workshop-cards/cardImages/person playing accordion.jpeg",
     effects: {
       engagement: 0,
