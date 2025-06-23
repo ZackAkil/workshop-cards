@@ -135,6 +135,21 @@ export const sampleCards = [
     shiny: true,
     createdAt: new Date().toISOString(),
   },
+  {
+    id: 10,
+    title: "A to B Navigator",
+    content:
+      "Know exactly where your audience starts (A) and where you want them to end (B). Be intentional about every step in between.",
+    image: "/workshop-cards/cardImages/a to b.jpeg",
+    effects: {
+      engagement: 5,
+      composure: 0,
+      clarity: 5,
+      adaptability: 1,
+    },
+    rarity: "Skilled",
+    createdAt: new Date().toISOString(),
+  },
 ];
 
 export const sampleDecks = [
