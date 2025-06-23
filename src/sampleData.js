@@ -4,7 +4,7 @@ export const sampleCards = [
     title: "Drop the mask",
     content:
       "The power of telling your own story, instead of selling someone else's.",
-    image: "/src/assets/cardImages/person removing mask.jpeg",
+    image: "/workshop-cards/cardImages/person removing mask.jpeg",
     effects: {
       engagement: 5,
       composure: 5,
@@ -20,7 +20,7 @@ export const sampleCards = [
     title: "Crowd Control",
     content:
       "Whether it's awkward questions, a noisy group, or a distracting alarm, how you manage disruptions counts.",
-    image: "/src/assets/cardImages/angry crowd member.jpeg",
+    image: "/workshop-cards/cardImages/angry crowd member.jpeg",
     effects: {
       engagement: 0,
       composure: 4,
@@ -35,7 +35,7 @@ export const sampleCards = [
     title: "Path finder",
     content:
       "You can never be the expert of the whole mountain, but you can be of a single path you took up it.",
-    image: "/src/assets/cardImages/person climbing mountain.jpeg",
+    image: "/workshop-cards/cardImages/person climbing mountain.jpeg",
     effects: {
       engagement: 2,
       composure: 5,
@@ -49,7 +49,7 @@ export const sampleCards = [
     id: 5,
     title: "Demo Daredevil",
     content: "Being excited to face the unpredictability of live demos.",
-    image: "/src/assets/cardImages/demos.jpeg",
+    image: "/workshop-cards/cardImages/demos.jpeg",
     effects: {
       engagement: 5,
       composure: 1,
@@ -64,7 +64,7 @@ export const sampleCards = [
     title: "Baseline setter",
     content:
       "Empathize that the audience may not know what is good and what is amazing. So show them.",
-    image: "/src/assets/cardImages/person with scales.jpeg",
+    image: "/workshop-cards/cardImages/person with scales.jpeg",
     effects: {
       engagement: 1,
       composure: 0,
@@ -79,7 +79,7 @@ export const sampleCards = [
     title: "Accordion Slides",
     content:
       "Being able to talk for however long you need to is the mark of a true professional.",
-    image: "/src/assets/cardImages/person playing accordion.jpeg",
+    image: "/workshop-cards/cardImages/person playing accordion.jpeg",
     effects: {
       engagement: 0,
       composure: 0,
@@ -94,7 +94,7 @@ export const sampleCards = [
     title: "Play the Crowd",
     content:
       "Why did the audience need to be there? Would it matter if they left? It should.",
-    image: "/src/assets/cardImages/happy crowd.jpeg",
+    image: "/workshop-cards/cardImages/happy crowd.jpeg",
     effects: {
       engagement: 5,
       composure: 0,
@@ -109,7 +109,7 @@ export const sampleCards = [
     title: "Text Tsunami",
     content:
       "When your slides are drowning in words, your audience is gasping for air. Less is more!",
-    image: "/src/assets/cardImages/word flood.png",
+    image: "/workshop-cards/cardImages/word flood.png",
     effects: {
       engagement: -2,
       composure: 0,
@@ -124,7 +124,7 @@ export const sampleCards = [
     title: "Level Up",
     content:
       "Practice and reflect! Every time you present, you get better—if you pay attention.",
-    image: "/src/assets/cardImages/experience.jpeg",
+    image: "/workshop-cards/cardImages/experience.jpeg",
     effects: {
       engagement: 5,
       composure: 5,
