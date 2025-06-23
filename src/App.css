@@ -1,0 +1,771 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  background: #f7f7f7;
+  min-height: 100vh;
+  color: #333;
+}
+
+.app {
+  width: 100vw;
+  min-width: 0;
+  margin: 0;
+  padding: 32px 16px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: #f7f7f7;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px 0 20px 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #fff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header-actions {
+  display: flex;
+  gap: 15px;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 40px;
+}
+
+.empty-state h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-icon {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Deck selector */
+.deck-selector {
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.deck-select {
+  padding: 12px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  min-width: 200px;
+}
+
+.deck-select option {
+  background: #333;
+  color: white;
+}
+
+/* Cards grid - Responsive and filling */
+.cards-grid {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.rarity-group {
+  display: block;
+  width: 100%;
+}
+
+.card-container {
+  display: inline-block;
+  vertical-align: top;
+  margin: 16px 12px;
+  width: 280px;
+  min-width: 260px;
+  max-width: 320px;
+  box-sizing: border-box;
+}
+
+/* Card styles - Making them actually card-shaped */
+.card {
+  width: 100%;
+  aspect-ratio: 2.5 / 3.5;
+  position: relative;
+  background: #fff;
+  border: 3px solid #e0e0e0;
+  border-radius: 16px;
+  box-sizing: border-box;
+  /* Remove all shadows and gradients */
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+/* Initial Face (Grayed out) */
+.card-front {
+  background: #f7f7f7;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.card-image-grayscale {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: grayscale(100%) brightness(0.8);
+  opacity: 0.18;
+}
+
+.card-image-grayscale img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-image-square {
+  width: 100%;
+  max-width: 100%;
+  height: 45%;
+  margin: 0 0 12px 0;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7f7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-image-square img {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-back-logo {
+  display: none;
+}
+
+/* Flipped Face (Detailed) */
+.card-back {
+  background: #fff;
+  justify-content: flex-start;
+  padding: 15px;
+  transform: rotateY(180deg);
+}
+
+.card-back .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  z-index: 2;
+}
+
+.card-back .card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222;
+  text-align: left;
+  flex: 1;
+  margin-right: 8px;
+  line-height: 1.2;
+}
+
+.card-back .card-rarity {
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.card-back .card-image {
+  margin: 0;
+  border-radius: 0;
+  overflow: visible;
+  position: static;
+  background: none;
+  display: block;
+  align-items: unset;
+  justify-content: unset;
+  max-height: unset;
+  flex: unset;
+}
+
+.card-back .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card-back .card-deck {
+  font-size: 0.7rem;
+  color: #666;
+  font-weight: 500;
+  text-align: left;
+  font-style: italic;
+}
+
+.card-back .card-content {
+  flex: 1;
+  text-align: left;
+  margin: 12px 0;
+  overflow-y: auto;
+}
+
+.card-back .card-content p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #333;
+  font-weight: 500;
+}
+
+.card-back .card-effects {
+  border-top: 2px solid #e0e0e0;
+  padding-top: 8px;
+  margin-top: auto;
+  background: none;
+}
+
+.card-back .card-effects h4 {
+  font-size: 0.7rem;
+  color: #555;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Card front styling */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  z-index: 2;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222;
+  text-align: left;
+  flex: 1;
+  margin-right: 8px;
+  line-height: 1.2;
+}
+
+.card-rarity {
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.card-rarity.rarity-base {
+  background: #1976d2 !important; /* vibrant blue */
+  color: #fff !important;
+}
+
+.card-rarity.rarity-skilled {
+  background: #43a047; /* vibrant green */
+}
+
+.card-rarity.rarity-advanced {
+  background: #fbc02d !important; /* vibrant yellow */
+  color: #222 !important;
+}
+
+.card-rarity.rarity-mythic {
+  background: #e53935; /* vibrant red */
+}
+
+.card-image {
+  flex: 1;
+  margin: 8px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card-deck {
+  font-size: 0.7rem;
+  color: #666;
+  font-weight: 500;
+  text-align: left;
+  font-style: italic;
+  margin-top: auto;
+}
+
+.card-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+}
+
+/* Card back styling */
+.card-content {
+  flex: 1;
+  text-align: left;
+  margin-bottom: 12px;
+  overflow-y: auto;
+}
+
+.card-content p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #333;
+  font-weight: 500;
+}
+
+.card-effects {
+  border-top: 2px solid #e0e0e0;
+  padding-top: 8px;
+  margin-top: auto;
+  background: none;
+}
+
+.card-effects h4 {
+  font-size: 0.7rem;
+  color: #555;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.effects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.effect-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.65rem;
+}
+
+.effect-label {
+  color: #555;
+  font-weight: 500;
+}
+
+.effect-value {
+  font-weight: 700;
+  padding: 2px 4px;
+  border-radius: 3px;
+  min-width: 16px;
+  text-align: center;
+  background: #e0e0e0;
+  color: #222;
+}
+
+.effect-value.positive {
+  background: #43a047;
+  color: #fff;
+}
+
+.effect-value.negative {
+  background: #e53935;
+  color: #fff;
+}
+
+.effect-value.neutral {
+  background: #bdbdbd;
+  color: #222;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .card-container {
+    width: calc(33.333% - 24px);
+  }
+  .effect-item {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .card-container {
+    width: calc(50% - 24px);
+  }
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 16px 8px;
+  }
+  .card-container {
+    width: 100%;
+    margin: 12px 0;
+    min-width: 280px;
+    max-width: 100%;
+  }
+  .card {
+    min-width: 280px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .card-back .card-title {
+    font-size: 0.9rem;
+  }
+  .card-back .card-content p {
+    font-size: 0.75rem;
+  }
+  .effects-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+  .effect-item {
+    font-size: 0.6rem;
+  }
+}
+
+@keyframes jiggle {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+}
+
+/* Loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Hover effects */
+.card-container:not(.is-modal) .card:hover {
+  animation: jiggle 0.3s ease-in-out infinite;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #e0e0e0;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.card-rarity-back {
+  z-index: 2;
+  opacity: 0.95;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(240, 240, 240, 0.95);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  width: auto;
+  max-width: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container.is-modal .card {
+  width: 520px;
+  max-width: 98vw;
+  height: auto;
+  aspect-ratio: 2.5 / 3.5;
+}
+
+.card-container.is-modal .card-title {
+  font-size: 2rem;
+}
+.card-container.is-modal .card-content p {
+  font-size: 1.3rem;
+}
+.card-container.is-modal .effect-item {
+  font-size: 1.2rem;
+}
+.card-container.is-modal .card-effects h4 {
+  font-size: 1rem;
+}
+
+.rarity-separator {
+  position: relative;
+  width: 100%;
+  border-top: 3px solid #e0e0e0;
+  margin: 32px 0 16px 0;
+  padding-top: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: 1px;
+  color: #888;
+  background: none;
+  height: 38px;
+}
+.rarity-separator-label {
+  display: inline-block;
+  position: absolute;
+  top: -1.5px;
+  left: 0;
+  padding: 6px 18px 6px 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: none;
+  box-shadow: none;
+  z-index: 1;
+}
+.rarity-separator.rarity-base {
+  border-top: 3px solid #1976d2;
+}
+.rarity-separator.rarity-skilled {
+  border-top: 3px solid #43a047;
+}
+.rarity-separator.rarity-advanced {
+  border-top: 3px solid #fbc02d;
+}
+.rarity-separator.rarity-mythic {
+  border-top: 3px solid #e53935;
+}
+.rarity-separator.rarity-base .rarity-separator-label {
+  background: #1976d2;
+  color: #fff;
+}
+.rarity-separator.rarity-skilled .rarity-separator-label {
+  background: #43a047;
+  color: #fff;
+}
+.rarity-separator.rarity-advanced .rarity-separator-label {
+  background: #fbc02d;
+  color: #222;
+}
+.rarity-separator.rarity-mythic .rarity-separator-label {
+  background: #e53935;
+  color: #fff;
+}
+
+/* Remove all gradients, shadows, and textures from all elements */
+.btn,
+.header,
+.empty-state,
+.deck-select,
+.modal-backdrop,
+.modal-content,
+.card,
+.card-inner,
+.card-front,
+.card-back,
+.card-rarity,
+.card-effects,
+.effect-value,
+.rarity-separator {
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.card-container.shiny .card {
+  border: 4px solid #ffd700 !important; /* gold */
+  box-shadow: 0 0 0 4px #fff inset;
+}
+.shiny-tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 12px;
+  background: #ffd700;
+  color: #222;
+  font-size: 0.85rem;
+  font-weight: 900;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  position: relative;
+  top: -2px;
+}
+
+.shiny-star {
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+  position: relative;
+  top: 2px;
+}
