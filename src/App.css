@@ -769,3 +769,101 @@ body {
   position: relative;
   top: 2px;
 }
+
+.settings-cog {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 2000;
+  background: none;
+  border: none;
+  padding: 4px;
+  opacity: 0.18;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+.settings-cog:hover,
+.settings-cog:focus {
+  opacity: 0.7;
+}
+
+.settings-menu {
+  position: fixed;
+  top: 54px;
+  right: 18px;
+  z-index: 2100;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px 0 #0001;
+  padding: 18px 20px 16px 20px;
+  min-width: 220px;
+  max-width: 90vw;
+  font-size: 1rem;
+}
+.settings-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #1976d2;
+}
+.settings-list {
+  margin-bottom: 12px;
+}
+.settings-rarity-group {
+  margin-bottom: 12px;
+}
+.settings-rarity-separator {
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  margin: 8px 0 6px 0;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+.settings-rarity-separator.rarity-mythic {
+  background: #e53935;
+}
+.settings-rarity-separator.rarity-advanced {
+  background: #fbc02d;
+  color: #222;
+}
+.settings-rarity-separator.rarity-skilled {
+  background: #43a047;
+}
+.settings-rarity-separator.rarity-base {
+  background: #1976d2;
+}
+.settings-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  padding-left: 4px;
+}
+.settings-checkbox input[type="checkbox"] {
+  accent-color: #1976d2;
+  width: 18px;
+  height: 18px;
+}
+.settings-close {
+  display: block;
+  margin: 0 auto;
+  margin-top: 8px;
+  padding: 6px 18px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.settings-close:hover {
+  background: #1251a3;
+}
