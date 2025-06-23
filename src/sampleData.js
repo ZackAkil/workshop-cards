@@ -49,9 +49,9 @@ export const sampleCards = [
     image: "/workshop-cards/cardImages/demos.jpeg",
     effects: {
       engagement: 5,
-      composure: 1,
-      clarity: 5,
-      adaptability: 1,
+      composure: 5,
+      clarity: 0,
+      adaptability: 0,
     },
     rarity: "Base",
   },
