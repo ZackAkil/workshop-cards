@@ -172,7 +172,7 @@ export const sampleCards = [
     id: 13,
     title: "Uniquely Solvable",
     content:
-      "When demoing new technology, show compelling use cases that are genuinely enabled only by that tech. Don't force new solutions into old problems.",
+      "Show compelling use cases that are genuinely enabled only by that tech. Don't force new tech into old problems.",
     image: "/workshop-cards/cardImages/hammer screw.jpeg",
     effects: {
       engagement: 5,
