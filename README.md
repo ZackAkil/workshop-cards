@@ -47,8 +47,6 @@ npm run preview
 npm run deploy
 ```
 
-Your site will be live at: [https://zackakil.github.io/workshop-cards/](https://zackakil.github.io/workshop-cards/)
-
 ## Customization
 
 - **Add/Edit Cards:** Edit `src/sampleData.js` to add or modify cards. Images should be placed in `public/cardImages/` and referenced as `/workshop-cards/cardImages/your-image.jpeg`.
