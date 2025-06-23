@@ -13,7 +13,6 @@ export const sampleCards = [
     },
     rarity: "Base",
     shiny: true,
-    createdAt: new Date().toISOString(),
   },
   {
     id: 1,
@@ -28,7 +27,6 @@ export const sampleCards = [
       adaptability: 3,
     },
     rarity: "Advanced",
-    createdAt: new Date().toISOString(),
   },
   {
     id: 4,
@@ -43,7 +41,6 @@ export const sampleCards = [
       adaptability: 0,
     },
     rarity: "Skilled",
-    createdAt: new Date().toISOString(),
   },
   {
     id: 5,
@@ -57,7 +54,6 @@ export const sampleCards = [
       adaptability: 1,
     },
     rarity: "Base",
-    createdAt: new Date().toISOString(),
   },
   {
     id: 6,
@@ -72,7 +68,6 @@ export const sampleCards = [
       adaptability: 0,
     },
     rarity: "Skilled",
-    createdAt: new Date().toISOString(),
   },
   {
     id: 2,
@@ -87,7 +82,6 @@ export const sampleCards = [
       adaptability: 5,
     },
     rarity: "Advanced",
-    createdAt: new Date().toISOString(),
   },
   {
     id: 7,
@@ -102,7 +96,6 @@ export const sampleCards = [
       adaptability: 3,
     },
     rarity: "Advanced",
-    createdAt: new Date().toISOString(),
   },
   {
     id: 8,
@@ -117,7 +110,6 @@ export const sampleCards = [
       adaptability: -5,
     },
     rarity: "Base",
-    createdAt: new Date().toISOString(),
   },
   {
     id: 9,
@@ -133,7 +125,6 @@ export const sampleCards = [
     },
     rarity: "Advanced",
     shiny: true,
-    createdAt: new Date().toISOString(),
   },
   {
     id: 10,
@@ -148,7 +139,6 @@ export const sampleCards = [
       adaptability: 1,
     },
     rarity: "Skilled",
-    createdAt: new Date().toISOString(),
   },
   {
     id: 11,
@@ -163,7 +153,6 @@ export const sampleCards = [
       adaptability: 0,
     },
     rarity: "Skilled",
-    createdAt: new Date().toISOString(),
   },
   {
     id: 12,
@@ -178,7 +167,20 @@ export const sampleCards = [
       adaptability: 0,
     },
     rarity: "Base",
-    createdAt: new Date().toISOString(),
+  },
+  {
+    id: 13,
+    title: "Uniquely Solvable",
+    content:
+      "When demoing new technology, show compelling use cases that are genuinely enabled only by that tech. Don't force new solutions into old problems.",
+    image: "/workshop-cards/cardImages/hammer screw.jpeg",
+    effects: {
+      engagement: 5,
+      composure: 0,
+      clarity: 5,
+      adaptability: 0,
+    },
+    rarity: "Skilled",
   },
 ];
 
