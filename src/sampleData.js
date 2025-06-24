@@ -182,6 +182,47 @@ export const sampleCards = [
     },
     rarity: "Skilled",
   },
+  {
+    id: 14,
+    title: "Scrabbler",
+    content:
+      "Is your goal to sound smart or make you audience smarter? Strive to make the complex simple.",
+    image: "/workshop-cards/cardImages/scrabble.jpeg",
+    effects: {
+      engagement: -1,
+      composure: 0,
+      clarity: -5,
+      adaptability: 0,
+    },
+    rarity: "Skilled",
+  },
+  {
+    id: 15,
+    title: "Unseen Contentness",
+    content:
+      "You can't cover everything, the audience dosen't know what they are missing. Just show what you need to.",
+    image: "/workshop-cards/cardImages/unseen content.jpeg",
+    effects: {
+      engagement: 0,
+      composure: 5,
+      clarity: 4,
+      adaptability: 2,
+    },
+    rarity: "Skilled",
+  },
+  {
+    id: 16,
+    title: "Change it up",
+    content: "Anything that breaks what is expected will grab attention.",
+    image: "/workshop-cards/cardImages/balloon.jpeg",
+    effects: {
+      engagement: 5,
+      composure: 0,
+      clarity: 0,
+      adaptability: 0,
+    },
+    rarity: "Advanced",
+  },
 ];
 
 export const sampleDecks = [
